@@ -5,6 +5,7 @@ go 1.19
 require github.com/cosmos/cosmos-sdk v0.45.9
 
 require (
+	filippo.io/edwards25519 v1.0.0-beta.2 // indirect
 	github.com/DataDog/zstd v1.4.8 // indirect
 	github.com/armon/go-metrics v0.4.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -35,6 +36,7 @@ require (
 	github.com/hashicorp/go-uuid v1.0.1 // indirect
 	github.com/hashicorp/golang-lru v0.5.5-0.20210104140557-80c98217689d // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/hdevalence/ed25519consensus v0.0.0-20210204194344-59a8610d2b87 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jmhodges/levigo v1.0.0 // indirect
 	github.com/libp2p/go-buffer-pool v0.1.0 // indirect

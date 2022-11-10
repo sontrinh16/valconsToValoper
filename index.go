@@ -1,13 +1,20 @@
 package main
 
 import (
+	"encoding/base64"
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"
+	"github.com/cosmos/cosmos-sdk/types/bech32"
 )
 
 func main() {
-	addr2, _ := sdk.ConsAddressFromBech32(
-		"cosmosvalcons10e4c5p6qk0sycy9u6u43t7csmlx9fyadr9yxph")
-	fmt.Println(sdk.ValAddress(addr2).String())
+	var strKey = "d0hOXvDMHeFnCEnWbSb3qr/q/IT+SFSgzPn1f686xic="
+	data, _ := base64.StdEncoding.DecodeString(strKey)
+
+	pubkey := ed25519.PubKey{Key: data}
+
+	bech32Addr, _ := bech32.ConvertAndEncode("osmovalcons", pubkey.Address())
+
+	fmt.Println(bech32Addr)
 }
